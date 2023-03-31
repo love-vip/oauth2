@@ -11,7 +11,6 @@
     <properties>
         <spring-boot.version>3.0.5</spring-boot.version>
         <oauth2-authorization-server.version>1.0.1</oauth2-authorization-server.version>
-        <jjwt.version>0.11.5</jjwt.version>
         <nimbus.version>9.9.1</nimbus.version>
     </properties>
 
@@ -34,24 +33,7 @@
                 <version>${oauth2-authorization-server.version}</version>
             </dependency>
 
-            <!-- JWT -->
-            <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt-jackson</artifactId>
-                <version>${jjwt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt-impl</artifactId>
-                <version>${jjwt.version}</version>
-            </dependency>
-
-            <!-- spring-boot-dependencies 2.6.1  已经移除了它，所以这里自己来 -->
-            <dependency>
-                <groupId>com.nimbusds</groupId>
-                <artifactId>nimbus-jose-jwt</artifactId>
-                <version>${nimbus.version}</version>
-            </dependency>
+            <!-- nimbusds -->
             <dependency>
                 <groupId>com.nimbusds</groupId>
                 <artifactId>oauth2-oidc-sdk</artifactId>
